@@ -1,0 +1,18 @@
+{
+  "name": "List command demo",
+  "command": {
+    "file": "ls",
+    "message": "User wanted to print the following ",
+    "args": ["-l"],
+    "appendFlagName": false,
+    "appendWith": " "
+  },
+  "prompts": [
+    {
+      "name": "diplayValue",
+      "type": "input",
+      "message": "Ls which directory",
+      "initial": "."
+    }
+  ]
+}

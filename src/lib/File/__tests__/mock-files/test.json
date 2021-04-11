@@ -1,0 +1,20 @@
+{
+  "message": "Text to display in the category list", // Message to display in the category list
+  "command": {
+    "file": "echo", // It can be path to a script or binary. Don't specify args here(do it below) or sudo.
+    "message": "Text to display while running the command",
+    "args": ["args"], // If the program has args that needs to be passed and you are sure of it, specify it here as an array
+    "appendFlagName": false, // If this is not specified, the default is false.
+    "appendWith": " " // If this is not specified, default is "space". This is only considered if "appendFlagName" is specified
+  },
+  "prompts": [
+    // This has your list of prompts you wanna display. The type of objects we need to pass is similar to "enquirer.js"
+    {
+      "name": "flagName",
+      "type": "input",
+      "message": "Question to ask the user",
+      "initial": "Default value",
+      "choice": []
+    }
+  ]
+}

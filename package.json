@@ -1,0 +1,70 @@
+{
+  "name": "cisr",
+  "version": "1.0.0",
+  "description": "Interactive runner and documentation for your scripts. Scissor the time spent revisiting your scripts and commands with minimal effort.",
+  "main": "./dist/src/lib/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn src/bin/index.ts --watch src/",
+    "build": "tsc",
+    "install_pkg": "npm uninstall -g cisr && npm run build && npm link",
+    "test": "cross-env NODE_ENV=development jest --coverage"
+  },
+  "bin": {
+    "cisr": "./dist/src/bin/index.js"
+  },
+  "keywords": [
+    "cli",
+    "script",
+    "runner",
+    "interactive",
+    "commandline",
+    "linux",
+    "mac",
+    "macos",
+    "windows",
+    "cross",
+    "platform",
+    "automation",
+    "server"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SkrewEverything/cisr"
+  },
+  "author": {
+    "email": "skreweverything@gmail.com",
+    "name": "SkrewEverything",
+    "url": "https://skreweverything.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^5.0.1",
+    "chalk": "^4.1.0",
+    "data-store": "^4.0.3",
+    "enquirer": "^2.3.6",
+    "execa": "^5.0.0",
+    "hjson": "^3.2.2",
+    "listr": "^0.14.3"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@types/hjson": "^2.4.2",
+    "@types/jest": "^26.0.22",
+    "@types/listr": "^0.14.2",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.4",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}

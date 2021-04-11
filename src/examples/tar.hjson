@@ -1,0 +1,37 @@
+{
+  "name": "Tar files",
+  "command": {
+    // executable name
+    "file": "tar",
+    "args": ["-cz"],
+    "message": "Compressed the files",
+    "appendFlagName": true
+  },
+  "prompts": [
+    {
+      // flag name
+      "name": "-f",
+      "type": "input",
+      "message": "Archive Name?",
+      // default value for the new archive
+      "initial": "archive.tar.gz"
+    },
+    {
+      "name": "-v",
+      // confirm prompt. If true, -v flag is added
+      "type": "confirm",
+      "message": "Verbose?",
+      "initial": true
+    },
+    {
+      "name": "source",
+      "type": "input",
+      "message": "Source?",
+
+      "initial": "/Users/skreweverything/.ssh",
+      // Appending flag name on per flag basis.
+      // As the source doesn't have any flag, source flag name is not appended
+      "appendFlagName": false
+    }
+  ]
+}
